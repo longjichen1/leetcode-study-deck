@@ -903,7 +903,6 @@ function updateFSRS(prev, quality, baseInterval) {
   } else {
     // For higher quality, multiply interval by ease factor but clamp between baseInterval and 10
     interval = Math.round(interval * ease);
-    interval = Math.max(baseInterval, Math.min(10, interval));
   }
 
   return { ease, interval };

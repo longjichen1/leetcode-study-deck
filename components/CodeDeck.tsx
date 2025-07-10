@@ -901,8 +901,9 @@ function updateFSRS(prev, quality, baseInterval) {
     // For low quality, reset interval to base interval
     interval = baseInterval;
   } else {
-    // For higher quality, multiply interval by ease factor but clamp between baseInterval and 10
+    // For higher quality, multiply interval by ease factor but clamp at 90 days
     interval = Math.round(interval * ease);
+    interval = Math.min(interval, 90);
   }
 
   return { ease, interval };

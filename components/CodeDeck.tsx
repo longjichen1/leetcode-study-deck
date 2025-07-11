@@ -1207,7 +1207,6 @@ export default function CodeDeck() {
             </label>
 
             <div style={styles.buttonGroup}>
-              <Button onClick={handleSave}>Save</Button>
               <Button onClick={handleNext}>Next Problem</Button>
               {!showAll && (
                 <Button onClick={handleReviewMore} variant="secondary">
